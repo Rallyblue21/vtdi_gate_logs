@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbUserName = new System.Windows.Forms.TextBox();
+            this.TbUserName = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.tbnReset = new System.Windows.Forms.Button();
@@ -68,12 +68,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Password";
             // 
-            // tbUserName
+            // TbUserName
             // 
-            this.tbUserName.Location = new System.Drawing.Point(338, 81);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(201, 20);
-            this.tbUserName.TabIndex = 4;
+            this.TbUserName.Location = new System.Drawing.Point(338, 81);
+            this.TbUserName.Name = "TbUserName";
+            this.TbUserName.Size = new System.Drawing.Size(201, 20);
+            this.TbUserName.TabIndex = 4;
             // 
             // tbPassword
             // 
@@ -81,6 +81,8 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(200, 20);
             this.tbPassword.TabIndex = 5;
+            this.tbPassword.UseSystemPasswordChar = true;
+            this.tbPassword.UseWaitCursor = true;
             // 
             // btnLogIn
             // 
@@ -90,6 +92,7 @@
             this.btnLogIn.TabIndex = 6;
             this.btnLogIn.Text = "LogIn";
             this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // tbnReset
             // 
@@ -99,6 +102,7 @@
             this.tbnReset.TabIndex = 7;
             this.tbnReset.Text = "Reset";
             this.tbnReset.UseVisualStyleBackColor = true;
+            this.tbnReset.Click += new System.EventHandler(this.tbnReset_Click);
             // 
             // LogInForm
             // 
@@ -108,7 +112,7 @@
             this.Controls.Add(this.tbnReset);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.tbUserName);
+            this.Controls.Add(this.TbUserName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -125,7 +129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbUserName;
+        private System.Windows.Forms.TextBox TbUserName;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Button tbnReset;

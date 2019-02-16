@@ -25,7 +25,42 @@ namespace vtdi_gate_logs
 
         private void label1_Click(object sender, EventArgs e)
         {
+            
 
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            String UserName = TbUserName.Text;
+            var Password = tbPassword.Text;
+            if (String.IsNullOrEmpty(Password) ||
+                String.IsNullOrEmpty(Password))
+            {
+                MessageBox.Show("Please enter values!");
+            }
+            else if (UserName == "admin" &&
+                String.Equals("admin", Password))
+            {
+                MessageBox.Show($"Welcome {UserName}");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Credentails Enter");
+            }
+                           
+            }
+
+        private void tbnReset_Click(object sender, EventArgs e)
+        {
+            TbUserName.Text = null;
+            tbPassword.Text = null;
+        }
+       
     }
 }
+
+
+        
+
+

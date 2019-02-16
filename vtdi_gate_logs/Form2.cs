@@ -11,15 +11,32 @@ using System.Windows.Forms;
 namespace vtdi_gate_logs
 {
     public partial class GateInOut : Form
-    {
-        public GateInOut()
         {
-            InitializeComponent();
+         public GateInOut()
+        
+            {
+                InitializeComponent();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btnReset(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogIn(object sender, EventArgs e)
+        {
+            
+           
+                
+
+               
+                  
+            }
+        }
     }
-}
+
