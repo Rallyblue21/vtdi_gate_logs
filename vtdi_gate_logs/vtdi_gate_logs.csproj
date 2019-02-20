@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +67,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gate_In_Out.cs">
+      <DependentUpon>Vtdi_Gate_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item_To_Declare.cs">
+      <DependentUpon>Vtdi_Gate_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Log In Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +81,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purpose_of_Visit.cs">
+      <DependentUpon>Vtdi_Gate_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Vtdi_Gate_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle_types.cs">
+      <DependentUpon>Vtdi_Gate_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vtdi_Gate_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vtdi_Gate_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vtdi_Gate_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vtdi_Gate_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vtdi_Gate_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vtdi_Gate_Model.edmx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +124,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +134,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="Vtdi_Gate_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Vtdi_Gate_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Vtdi_Gate_Model.edmx.diagram">
+      <DependentUpon>Vtdi_Gate_Model.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -103,6 +150,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fast car.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vtdi_Gate_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Vtdi_Gate_Model.Context.cs</LastGenOutput>
+      <DependentUpon>Vtdi_Gate_Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Vtdi_Gate_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Vtdi_Gate_Model.edmx</DependentUpon>
+      <LastGenOutput>Vtdi_Gate_Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

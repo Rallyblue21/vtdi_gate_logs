@@ -42,6 +42,8 @@ namespace vtdi_gate_logs
                 String.Equals("admin", Password))
             {
                 MessageBox.Show($"Welcome {UserName}");
+                var parent = (Form1)MdiParent;
+                parent.isLoggedIn = true;
                 this.Close();
             }
             else
@@ -57,6 +59,10 @@ namespace vtdi_gate_logs
             tbPassword.Text = null;
         }
        
+    }
+
+    internal class From1
+    {
     }
 }
 
